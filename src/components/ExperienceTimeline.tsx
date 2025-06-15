@@ -69,13 +69,19 @@ const experience = [
 const ExperienceTimeline = () => {
   return (
     <section>
-      <h2 className="text-2xl font-semibold mb-4 text-primary">Professional Experience</h2>
+      <h2 className="text-2xl font-playfair font-bold mb-4 text-primary">Professional Experience</h2>
       <ol className="relative border-l-2 border-primary/30 pl-8">
         {experience.map((role, idx) => (
-          <li key={role.title + role.company} className="mb-10 last:mb-0">
-            <div className="absolute -left-5 top-3 w-3 h-3 bg-primary rounded-full border-2 border-white shadow" />
-            <span className="text-sm font-medium text-primary bg-primary/10 px-2 py-0.5 rounded">{role.duration}</span>
-            <h3 className="mt-1 text-xl font-bold">{role.title}</h3>
+          <li key={role.title + role.company} className="mb-10 last:mb-0 relative">
+            {/* Timeline marker with glow */}
+            <span className="absolute -left-6 top-2.5 flex items-center justify-center">
+              <span className="w-4 h-4 bg-primary border-2 border-white shadow-lg rounded-full animate-pulse" />
+              <span className="absolute w-8 h-8 bg-primary/10 rounded-full -z-10" />
+            </span>
+            <span className="text-xs font-semibold text-primary tracking-wide bg-primary/10 px-2 py-0.5 rounded">
+              {role.duration}
+            </span>
+            <h3 className="mt-2 text-lg md:text-xl font-bold font-playfair text-foreground">{role.title}</h3>
             <p className="text-base font-medium text-muted-foreground mb-1">{role.company}</p>
             <ul className="list-disc pl-5 mt-1 space-y-1">
               {role.responsibilities.map((res, i) => (

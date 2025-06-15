@@ -36,16 +36,16 @@ interface SkillsSectionProps {
 const SkillsSection: React.FC<SkillsSectionProps> = ({ className }) => {
   return (
     <section className={className}>
-      <h2 className="text-lg font-semibold mb-3 text-primary">Technical Skills</h2>
+      <h2 className="text-lg font-bold mb-3 text-primary font-playfair">Technical Skills</h2>
       <div className="space-y-4">
         {categories.map(cat => (
           <div key={cat}>
-            <h3 className="text-sm font-bold text-muted-foreground mb-1">{cat}</h3>
+            <h3 className="text-sm font-semibold text-muted-foreground mb-1 tracking-wide uppercase">{cat}</h3>
             <div className="flex flex-wrap gap-2">
               {skills.filter(s => s.category === cat).map(skill => (
                 <span
                   key={skill.label}
-                  className="bg-primary/10 text-primary rounded px-2 py-0.5 text-xs font-medium"
+                  className="bg-primary/10 text-primary rounded px-2 py-0.5 text-xs font-medium shadow"
                 >
                   {skill.label}
                 </span>
