@@ -1,4 +1,3 @@
-
 const experience = [
   {
     title: "Vice President, Engineering",
@@ -6,10 +5,7 @@ const experience = [
     duration: "July 2022 - Present",
     responsibilities: [
       "Spearheading digital banking transformation across multiple platforms and geographies.",
-      "Led a multi-year migration initiative, enhancing system scalability and resilience.",
-      "Collaborated with DevOps teams to optimize CI/CD pipelines, reducing build times from 3 hours to ~30 minutes.",
-      "Defined and implemented multi-modular architecture, improving system maintainability and feature rollout efficiency.",
-      "Stakeholder management with C-level executives, ensuring alignment between technology and business strategy."
+      "Led a multi-year migration initiative, enhancing system scalability and resilience."
     ],
   },
   {
